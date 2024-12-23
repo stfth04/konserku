@@ -241,7 +241,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  margin-left: 0s;
 }
 .event-card {
   background-color: #d2cf9f;

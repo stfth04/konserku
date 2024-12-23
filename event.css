@@ -46,6 +46,7 @@ body {
   align-items: center; /* Vertically center the input and button */
   flex-grow: 1; /* Allow the search form to grow and take available space */
   margin-left: 20px; /* Memberikan jarak antara navbar dan form pencarian */
+  max-width: 600px;
 }
 
 .search-form input {
