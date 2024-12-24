@@ -1,14 +1,24 @@
 <?php
 session_start();
 
-// Check if the user is already logged in
-if (isset($_SESSION['user_id'])) {
-    header("Location: konserku.php");
-    exit();
-}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $lname = $_POST['lname'];
+  $password = $_POST['password'];
 
-// If there is an error message
-$error = isset($_GET['error']) ? $_GET['error'] : '';
+  // Contoh validasi login (ganti dengan database Anda)
+  if ($username === 'admin' && $password === '1234') {
+      // Simpan sesi login
+      $_SESSION['user_id'] = $username;
+
+      // Arahkan kembali ke dashboard
+      header('Location: dashboard.php');
+      exit;
+  } else {
+      // Login gagal, arahkan kembali ke login
+      header('Location: login.php?error=1');
+      exit;
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

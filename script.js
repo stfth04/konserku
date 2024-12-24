@@ -51,7 +51,7 @@ const events = [
 ];
 
 // Populate event cards dynamically
-const eventContainer = document.getElementById("eventContainer");
+const eventContainer = document.getElementById("event-Container");
 
 events.forEach((event) => {
   const card = document.createElement("div");
