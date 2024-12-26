@@ -23,7 +23,7 @@ if (isset($_POST['signUp'])) {
         // Insert new user
         $insertQuery = "INSERT INTO login (username, email, password) VALUES ('$username', '$email', '$password')";
         if ($conn->query($insertQuery) === TRUE) {
-            header("Location: index.php");
+            header("Location: login.php");
             exit();
         } else {
             echo "Error: " . $conn->error;
@@ -42,7 +42,7 @@ if (isset($_POST['signIn'])) {
         $row = $result->fetch_assoc();
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['username'] = $row['username'];
-        header("Location: konserku.php");
+        header("Location: konser/index.php");
         exit();
     } else {
         header("Location: login.php?error=Incorrect email or password");
