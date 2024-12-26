@@ -133,10 +133,11 @@ session_start();
         <h3 class="text-lg font-bold">Konserku</h3>
         <ul>
           <li>
-            <a class="hover:underline" href="#"> KonserKU adalah platform digital Informasi tiket untuk masyarakat
-              tau tentang tiket konser yang mereka ingin hadiri. platform digital
-              ini juga mempromosikan website pemesanan tiket konser dengan proses
-              yang aman, mudah dan cepat.</a>
+            <a class="hover:underline" href="#">Konserku adalah platform digital yang berfungsi sebagai company profile untuk memberikan informasi terbaru seputar event dan konser di wilayah Banjarmasin dan Banjarbaru. Kami hadir untuk menjadi sumber informasi terpercaya bagi para penikmat musik dan hiburan, sekaligus menjembatani para penyelenggara acara dengan audiens mereka.
+
+Dengan tampilan yang user-friendly, Konserku menyajikan detail lengkap setiap event, mulai dari jadwal, lokasi, hingga informasi tiket. Kami berkomitmen untuk mendukung perkembangan industri hiburan lokal, serta mempermudah masyarakat dalam mengakses informasi acara berkualitas di daerah mereka.
+
+Konserku—pilihan utama untuk tetap terhubung dengan dunia hiburan di Banjarmasin dan Banjarbaru.</a>
           </li>
         </ul>
       </div>

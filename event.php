@@ -44,12 +44,12 @@ session_start();
 </nav>
 <!--poster event-->
 <div>
-  <img src="jusip.png" alt="Contoh Gambar" class="full-width-image" />
+  <img src="akang.png" class="full-width-image" />
 </div>
 
 <!-- Event Details -->
 <main>
-<h1 class="konser-title">Konser Juicy Luicy</h1>
+<h1 class="konser-title">Konser Untuk Korban Sakit Hati Lagi</h1>
   <p class="event-meta">
     <i class="fas fa-calendar-alt"></i> Sabtu, 22 Februari 2025 &nbsp;
     <i class="fas fa-map-marker-alt"></i> Gedung Sultan Suriansyah,
@@ -62,51 +62,46 @@ session_start();
   <div class="event-content">
     <div class="event-description">
       <p>
-        "DEWA 19 ALL Featuring Allstars 2.0" bukan sekadar konser biasa ini
-        adalah selebrasi warisan musik legendaris DEWA 19 dengan skala yang
-        belum pernah ada sebelumnya. Promotor menghadirkan musisi rock
-        legendaris dunia, seperti Mr. Big, Bad English, dan Extreme untuk
-        menciptakan kolaborasi lintas batas yang akan mengguncang panggung.
+      Konser untuk Korban Sakit Hati Lagi adalah Tour Juicy Luicy dan Adrian Khalif. Dalam Tour ini Juicy Luicy dan Adrian Khalif akan mempersembahkan penampilan-penampilan berbeda.
       </p>
       <ul>
         <li>
-          Penampilan spesial oleh musisi rock legendaris seperti Mr. Big,
-          Bad English, Extreme, dan banyak lagi.
+          Penampilan spesial oleh musisi Juicy Luicy.
         </li>
-        <li>Diselenggarakan di <strong>Gelora Bung Karno</strong>.</li>
-        <li>Tanggal: Sabtu, 18 Januari 2025</li>
-        <li>Waktu: 19.00 WIB</li>
+        <li>Diselenggarakan di <strong>Gedung Suriansyah</strong>.</li>
+        <li>Tanggal: Sabtu, 22 Februari 2025</li>
+        <li>Waktu: - WIB</li>
       </ul>
       <p>
         Untuk informasi lengkap dan pemesanan tiket:
-        <a href="https://dewatiket.id/" target="_blank" class="btn-link"
+        <a href="https://www.goersapp.com/events/konser-untuk-korban-sakit-hati-lagi-banjarmasin--kukshlbanjarmasin" target="_blank" class="btn-link"
           >Klik di sini</a
         >
       </p>
     </div>
   </div>
   <!-- Seating Plan Image -->
-  <div class="event-image">
-    <img src="venue.png" alt="Seating Plan" class="seating-plan" />
-  </div>
+  <!--<div class="event-image">
+    <img src="-" alt="Seating Plan" class="seating-plan" />
+  </div>-->
 
   <!--line up-->
   <h2 class="lineup-title">Line up</h2>
   <div class="lineup-container">
     <div class="lineup-list">
       <ul class="column">
-        <li><strong>MR. BIG</strong> (Eric Martin & Billy Sheehan)</li>
-        <li><strong>EXTREME</strong> (Gary Cherone & Nuno Bettencourt)</li>
-        <li><strong>BAD ENGLISH</strong> (John Waite)</li>
-        <li>Derek Sherinian</li>
-        <li>Dino Jelusick</li>
+        <li>Juicy Luicy</li>
+        <!--<li>-</li>
+        <li><strong>-</strong></li>
+        <li>-</li>
+        <li-</li>-->
       </ul>
-      <ul class="column">
-        <li>Ron Bumblefoot Thal</li>
+      <!--<ul class="column">
+        <li>Juicy Luicy</li>
         <li>Ari Lasso</li>
         <li>Marcello Tahitoe (Ello)</li>
         <li>Virzha</li>
-        <li>DEWA 19</li>
+        <li>DEWA 19</li>-->
       </ul>
     </div>
   </div>
@@ -117,10 +112,11 @@ session_start();
         <h3 class="text-lg font-bold">Konserku</h3>
         <ul>
           <li>
-            <a class="hover:underline" href="#"> KonserKU adalah platform digital Informasi tiket untuk masyarakat
-              tau tentang tiket konser yang mereka ingin hadiri. platform digital
-              ini juga mempromosikan website pemesanan tiket konser dengan proses
-              yang aman, mudah dan cepat.</a>
+            <a class="hover:underline" href="#"> Konserku adalah platform digital yang berfungsi sebagai company profile untuk memberikan informasi terbaru seputar event dan konser di wilayah Banjarmasin dan Banjarbaru. Kami hadir untuk menjadi sumber informasi terpercaya bagi para penikmat musik dan hiburan, sekaligus menjembatani para penyelenggara acara dengan audiens mereka.
+
+Dengan tampilan yang user-friendly, Konserku menyajikan detail lengkap setiap event, mulai dari jadwal, lokasi, hingga informasi tiket. Kami berkomitmen untuk mendukung perkembangan industri hiburan lokal, serta mempermudah masyarakat dalam mengakses informasi acara berkualitas di daerah mereka.
+
+Konserku—pilihan utama untuk tetap terhubung dengan dunia hiburan di Banjarmasin dan Banjarbaru.</a>
           </li>
         </ul>
       </div>
