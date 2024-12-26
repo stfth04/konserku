@@ -1,24 +1,5 @@
 <?php
-session_start();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $lname = $_POST['lname'];
-  $password = $_POST['password'];
-
-  // Contoh validasi login (ganti dengan database Anda)
-  if ($username === 'admin' && $password === '1234') {
-      // Simpan sesi login
-      $_SESSION['user_id'] = $username;
-
-      // Arahkan kembali ke dashboard
-      header('Location: dashboard.php');
-      exit;
-  } else {
-      // Login gagal, arahkan kembali ke login
-      header('Location: login.php?error=1');
-      exit;
-  }
-}
+session_start();  // Memulai session
 ?>
 <!DOCTYPE html>
 <html lang="en">

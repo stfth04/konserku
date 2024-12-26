@@ -1,8 +1,6 @@
 <?php
 session_start();
 session_destroy();
-
-// Arahkan kembali ke dashboard
-header('Location: index.php');
+header("Location: konser/index.php");
 exit;
 ?>

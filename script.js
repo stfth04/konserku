@@ -75,3 +75,11 @@ events.forEach((event) => {
 
 // Contoh JavaScript (tidak diperlukan untuk footer tetap)
 console.log("Footer siap!");
+
+function showDropdown() {
+  document.getElementById("dropdown").style.display = "block";
+}
+
+function hide Dropdown() {
+  document.getElementById("dropdown").style.displpay = "none";
+}
