@@ -28,9 +28,8 @@ session_start();
 <nav class="bg-[#804E00] p-4 h-20 flex justify-between items-center">
   <!-- Logo -->
   <div class="flex items-center space-x-4">
-  <img alt="Logo" class="h-[45px] w-auto" src="logoo.png" />
+  <img alt="Logo" class="h-[45px] w-auto" src="logoo.png"/>
   </div>
-
   <!-- Search Bar -->
   <div class="flex items-center flex-grow mx-4">
     <input class="px-4 py-2 rounded-full focus:outline-none w-full" placeholder="Search..." type="text" />

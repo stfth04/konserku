@@ -64,7 +64,7 @@ session_start();
           </p> <br>
           <div class="flex justify-end">
             <a class="bg-[#D2CF9F] text-black px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none text-bold"
-              href="event.php">
+              href="jusi/event.php">
               Selengkapnya
             </a>
           </div>
