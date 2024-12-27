@@ -96,8 +96,7 @@ session_start();
         <div class="p-6">
           <h2 class="text-xl font-bold text-white">Dewa 19 Featuring Allstars 2.0</h2>
           <p class="text-gray-300">
-            This is a brief description of the information provided in this
-            card. It gives an overview of the content.
+            konser dewa jar
           </p>
           <div class="flex justify-end">
             <a class="bg-[#D2CF9F] text-black px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none"
@@ -110,18 +109,17 @@ session_start();
       <div class="bg-[#804E00] rounded-lg shadow-md overflow-hidden">
         <img alt="Informative image with a detailed description of the content" class="w-full h-48 object-cover"
           height="192"
-          src="https://storage.googleapis.com/a1aa/image/9sovfQagGIQewUk8d3COvy26K8WcDtQL9xH0rWE0BZQ6fX7nA.jpg"
+          src="ara.jpeg"
           width="100%" />
         <div class="p-6">
-          <h2 class="text-xl font-bold text-white">Information Title 6</h2>
+          <h2 class="text-xl font-bold text-white">Konser Bernyanyi Dengan Artis Mantuil</h2>
           <p class="text-gray-300">
-            This is a brief description of the information provided in this
-            card. It gives an overview of the content.
+           konser ara
           </p>
           <div class="flex justify-end">
             <a class="bg-[#D2CF9F] text-black px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none"
               href="detail.html">
-              Read More
+              Selengkapnya
             </a>
           </div>
         </div>
