@@ -17,3 +17,9 @@ function confirmLogout() {
     window.location.href = "index.php";
   }
 }
+function scrollToTop(event){
+  if(window.location.pathname.includes("index.php")){
+    event.preventDefault();
+    window.scrollToTop({ top: 0, behavior: "smooth"});
+  }
+}

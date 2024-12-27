@@ -106,32 +106,49 @@ session_start();
     </div>
   </div>
   <!--FOOTER-->
-  <footer class="bg-[#804E00] text-white mt-8 p-4">
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div>
-        <h3 class="text-lg font-bold">Konserku</h3>
-        <ul>
-          <li>
-            <a class="hover:underline" href="#"> Konserku adalah platform digital yang berfungsi sebagai company profile untuk memberikan informasi terbaru seputar event dan konser di wilayah Banjarmasin dan Banjarbaru. Kami hadir untuk menjadi sumber informasi terpercaya bagi para penikmat musik dan hiburan, sekaligus menjembatani para penyelenggara acara dengan audiens mereka.
+  <footer>
+  <div class="footer-container">
+    <!-- Kolom Deskripsi -->
+    <div class="footer-column">
+      <h3>Konserku</h3>
+      <p>
+      Konserku adalah platform digital yang menyajikan informasi terkini tentang event dan 
+      konser di Banjarmasin dan Banjarbaru. Sebagai sumber terpercaya, kami menjembatani 
+      penyelenggara acara dengan audiens melalui detail lengkap, mulai dari jadwal, lokasi, hingga tiket.
+      Dengan tampilan user-friendly, Konserku mendukung perkembangan hiburan lokal dan mempermudah akses 
+      masyarakat terhadap informasi acara berkualitas. 
+      Pilihan utama untuk dunia hiburan di Banjarmasin dan Banjarbaru.
+      </p>
+    </div>
 
-Dengan tampilan yang user-friendly, Konserku menyajikan detail lengkap setiap event, mulai dari jadwal, lokasi, hingga informasi tiket. Kami berkomitmen untuk mendukung perkembangan industri hiburan lokal, serta mempermudah masyarakat dalam mengakses informasi acara berkualitas di daerah mereka.
+    <!-- Kolom Navigasi Cepat -->
+    <div class="footer-column">
+      <h3>Navigasi Cepat</h3>
+      <ul>
+        <li><a href="index.php" onclick="scrollToTop(event)">Beranda</a></li>
+        <li><a href="#events">Jadwal Konser</a></li>
+        <li><a href="#news">Berita dan Artikel</a></li>
+        <li><a href="#contact">Hubungi Kami</a></li>
+        <li><a href="#privacy">Kebijakan Privasi</a></li>
+      </ul>
+    </div>
 
-Konserku—pilihan utama untuk tetap terhubung dengan dunia hiburan di Banjarmasin dan Banjarbaru.</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg font-bold">Tentang Konserku</h3>
-        <ul>
-          <li>
-            <a class="hover:underline" href="#"> Informasi Event </a>
-          </li>
-          <li>
-            <a class="hover:underline" href="#"> Contact </a>
-          </li>
-        </ul>
+    <!-- Kolom Kontak -->
+    <div class="footer-column">
+      <h3>Kontak</h3>
+      <p>Email: <a href="mailto:info@konserku.com">info@konserku.com</a></p>
+      <p>Telepon: +62 812-3456-7890</p>
+      <h3>Ikuti Kami</h3>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
       </div>
     </div>
+  </div>
+  <div class="footer-bottom">
+    © 2024 Konserku. Semua Hak Dilindungi.
+  </div>
   </footer>
 </main>
   </html

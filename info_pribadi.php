@@ -11,6 +11,7 @@ session_start();
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="informasi.css" />
 </head>
 
 <body class="font-roboto bg-[#D2CF9F]">
@@ -73,15 +74,15 @@ session_start();
                 <h1 class="text-black font-bold mb-4">Ubah Sandi</h1>
                 <form>
                     <div class="mb-4">
-                        <label class="block text-black mb-2" for="current-password">Sandi Saat Ini</label>
+                        <label class="block text-black mb-2" for="current-password">Kata Sandi</label>
                         <input class="w-full p-2 border border-gray-300 rounded" id="current-password" type="password"/>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-black mb-2" for="new-password">Sandi Baru</label>
+                        <label class="block text-black mb-2" for="new-password">Kata Sandi Baru</label>
                         <input class="w-full p-2 border border-gray-300 rounded" id="new-password" type="password"/>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-black mb-2" for="confirm-password">Konfirmasi Sandi Baru</label>
+                        <label class="block text-black mb-2" for="confirm-password">Verifikasi Kata Sandi</label>
                         <input class="w-full p-2 border border-gray-300 rounded" id="confirm-password" type="password"/>
                     </div>
                     <button class="bg-white text-black font-bold py-2 px-4 rounded" type="submit">PERBARUI</button>

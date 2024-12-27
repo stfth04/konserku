@@ -20,3 +20,77 @@
 #dropdown a:hover {
   background-color: #bfbf8f;
 }
+/* Footer Container */
+footer {
+  background-color: #804E00; /* Latar belakang gelap */
+  color: #FFFFFF; /* Warna teks putih */
+  padding: 20px 10%;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #FFD700; /* Warna emas */
+}
+
+.footer-column p,
+.footer-column ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #FFD700;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-icons a:hover {
+  color: #FFD700;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #804E00;
+  padding-top: 10px;
+}
+
