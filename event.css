@@ -22,8 +22,8 @@
 }
 /* Footer Container */
 footer {
-  background-color: #804E00; /* Latar belakang gelap */
-  color: #FFFFFF; /* Warna teks putih */
+  background-color: #804e00; /* Latar belakang gelap */
+  color: #ffffff; /* Warna teks putih */
   padding: 20px 10%;
   font-family: Arial, sans-serif;
   margin-top: 20px;
@@ -45,7 +45,8 @@ footer {
 .footer-column h3 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #FFD700; /* Warna emas */
+  color: #ffd700; /* Warna emas */
+  font-weight: bold !important; /* Menjadikan teks bold */
 }
 
 .footer-column p,
@@ -64,25 +65,25 @@ footer {
 }
 
 .footer-column ul li a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
 }
 
 .social-icons a:hover {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* Footer Bottom */
@@ -90,7 +91,6 @@ footer {
   text-align: center;
   margin-top: 20px;
   font-size: 12px;
-  border-top: 1px solid #804E00;
+  border-top: 1px solid #804e00;
   padding-top: 10px;
 }
-

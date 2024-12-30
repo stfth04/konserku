@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php'; // Mengimpor file config.php
 ?>
 <!DOCTYPE html>
