@@ -80,9 +80,9 @@ session_start();
     </div>
   </div>
   <!-- Seating Plan Image -->
-  <!--<div class="event-image">
-    <img src="-" alt="Seating Plan" class="seating-plan" />
-  </div>-->
+  <div class="event-image">
+    <img src="venue.jpg" alt="Seating Plan" class="seating-plan" />
+  </div>
 
   <!--line up-->
   <h2 class="lineup-title">Line up</h2>

@@ -9,6 +9,20 @@
   z-index: 10;
 }
 
+.button-title {
+  background-color: #ffd700;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px; /* Ukuran font */
+  font-weight: bold; /* Teks tebal */
+  text-align: center; /* Teks di tengah */
+  display: inline-block; /* Agar bisa diatur seperti tombol */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  margin: 20px 0; /* Margin di atas dan bawah */
+}
+
 #dropdown a {
   text-decoration: none;
   color: black;

@@ -33,7 +33,7 @@ $events = $stmt->fetchAll();
         </a>
 </nav>
 <div class="container mx-auto mt-8">
-    <h1 class="text-2xl font-bold mb-4">Informasi Event</h1>
+<div class="button-title">Informasi Event</div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <?php foreach ($events as $event): ?>
             <div class="bg-[#804E00] rounded-lg shadow-md overflow-hidden">

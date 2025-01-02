@@ -64,16 +64,33 @@ main {
   margin-left: 20px; /* Beri jarak antara teks dan gambar */
 }
 
-.event-image img {
+/*.event-image img {
   display: flex;
-  width: 390px; /* Ukuran gambar sedang */
-  height: auto; /* Menjaga proporsi gambar */
-  border: 2px solid #000000; /* Garis pinggir untuk gambar */
-  border-radius: 5px; /* Sudut gambar membulat */
-  margin-top: -286px;
-  max-width: 500px; /* Gambar tidak akan lebih lebar dari kontainer */
-  height: auto;
+  width: 59px; /* Ukuran gambar sedang */
+/*height: auto; /* Menjaga proporsi gambar */
+/*border: 2px solid #000000; /* Garis pinggir untuk gambar */
+/*border-radius: 5px; /* Sudut gambar membulat */
+/*margin-top: -270px;
+  /*max-width: 500px; /* Gambar tidak akan lebih lebar dari kontainer */
+/*height: auto;
   margin-right: 50px;
+}*/
+
+.event-image {
+  display: flex; /* Menggunakan flexbox untuk memusatkan gambar */
+  justify-content: center; /* Memusatkan gambar secara horizontal */
+  align-items: center; /* Memusatkan gambar secara vertikal */
+  margin: 20px; /* Memberikan jarak di sekitar gambar */
+}
+
+.seating-plan {
+  max-width: 50%; /* Mengatur lebar maksimum gambar menjadi 80% dari kontainer */
+  height: auto; /* Memastikan tinggi gambar otomatis sesuai dengan lebar */
+  border: 2px solid #ccc; /* Menambahkan border di sekitar gambar */
+  border-radius: 8px; /* Memberikan sudut yang melengkung pada border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
+  margin-top: -265px;
+  margin-right: -50px;
 }
 
 .artist-lineup {
@@ -105,12 +122,12 @@ main {
   background-color: #804e00; /* Warna latar coklat */
   padding: 10px;
   border-radius: 10px; /* Sudut membulat */
-  max-width: 815px;
+  max-width: 1000px;
   margin: 0 auto; /* Tengah secara horizontal */
   margin-top: 10px;
   justify-content: space-between;
   display: flex;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 .column {
   list-style-type: disc; /* Bullet point */
@@ -144,8 +161,8 @@ main {
 
 /* Footer Container */
 footer {
-  background-color: #804E00; /* Latar belakang gelap */
-  color: #FFFFFF; /* Warna teks putih */
+  background-color: #804e00; /* Latar belakang gelap */
+  color: #ffffff; /* Warna teks putih */
   padding: 20px 10%;
   font-family: Arial, sans-serif;
   margin-top: 20px;
@@ -165,7 +182,7 @@ footer {
 .footer-column h3 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #FFD700; /* Warna emas */
+  color: #ffd700; /* Warna emas */
 }
 
 .footer-column p,
@@ -184,25 +201,25 @@ footer {
 }
 
 .footer-column ul li a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
 }
 
 .social-icons a:hover {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* Footer Bottom */
@@ -210,8 +227,6 @@ footer {
   text-align: center;
   margin-top: 20px;
   font-size: 12px;
-  border-top: 1px solid #804E00;
+  border-top: 1px solid #804e00;
   padding-top: 10px;
 }
-
-
