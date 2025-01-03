@@ -83,7 +83,7 @@ $events = $stmt->fetchAll();
         <span class="text-[#ffd700] mr-2">
         Hi, <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Admin'; ?>!
         </span>
-        <img src="ara.jpeg" alt="Profile Picture" class="h-10 w-10 rounded-full border-2 border-white" />
+        <img src="profile.png" alt="Profile Picture" class="h-10 w-10 rounded-full border-2 border-white" />
         <a href="../event.php" class="text-white ml-4 bg-[#ffd700] px-3 py-1 rounded hover:bg-[#ffd700]">Logout</a>
         </div>
         </div>

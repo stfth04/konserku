@@ -31,21 +31,22 @@ session_start();
   <img alt="Logo" class="h-[45px] w-auto" src="../lgo.png"/>
   </div>
   <!-- Search Bar -->
-  <div class="flex items-center flex-grow mx-4">
-    <input class="px-4 py-2 rounded-full focus:outline-none w-full" placeholder="Search..." type="text" />
-  </div>
-
-  <!-- Login Button -->
-  <a href="../admin/login.php" role="button" class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
+  <div class="flex items-center flex-grow mx-4 relative">
+    <span class="absolute left-4 text-[#804E00]">
+        <i class="fas fa-search"></i>
+    </span>
+    <input class="pl-10 py-2 rounded-full focus:outline-none w-full" placeholder="Search..." type="text" />
+    </div>
+    <!--Login button-->
+    <a href="../admin/login.php" role="button" class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
     Login
     <i class="fas fa-user ml-2"></i>
-  </a>
+    </a>
 </nav>
 <!--poster event-->
 <div>
-  <img src="akang.png" class="full-width-image" />
+  <img src="poster.png" class="full-width-image" />
 </div>
-
 <!-- Event Details -->
 <main>
 <h1 class="konser-title">Konser Untuk Korban Sakit Hati Lagi</h1>
