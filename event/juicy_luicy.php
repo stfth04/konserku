@@ -28,7 +28,7 @@ session_start();
 <nav class="bg-[#804E00] p-4 h-20 flex justify-between items-center">
   <!-- Logo -->
   <div class="flex items-center space-x-4">
-  <img alt="Logo" class="h-[45px] w-auto" src="logoo.png"/>
+  <img alt="Logo" class="h-[45px] w-auto" src="../lgo.png"/>
   </div>
   <!-- Search Bar -->
   <div class="flex items-center flex-grow mx-4">
@@ -36,8 +36,8 @@ session_start();
   </div>
 
   <!-- Login Button -->
-  <a href="login/login.php" role="button" class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
-    Login/Daftar
+  <a href="../admin/login.php" role="button" class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
+    Login
     <i class="fas fa-user ml-2"></i>
   </a>
 </nav>
@@ -57,9 +57,9 @@ session_start();
   <div class="garis"></div>
   <!-- Garis menggunakan div -->
   <!-- Content Section -->
-  <h2 class="lineup-title">Tentang Konser Juicy Luicy</h2>
   <div class="event-content">
     <div class="event-description">
+    <h2 class="lineup-title">Tentang Konser Juicy Luicy</h2>
       <p>
       Konser untuk Korban Sakit Hati Lagi adalah Tour Juicy Luicy dan Adrian Khalif. Dalam Tour ini Juicy Luicy dan Adrian Khalif akan mempersembahkan penampilan-penampilan berbeda.
       </p>
@@ -83,26 +83,10 @@ session_start();
   <div class="event-image">
     <img src="venue.jpg" alt="Seating Plan" class="seating-plan" />
   </div>
-
-  <!--line up-->
-  <h2 class="lineup-title">Line up</h2>
+  <!-- Line up -->
   <div class="lineup-container">
-    <div class="lineup-list">
-      <ul class="column">
-        <li>Juicy Luicy</li>
-        <!--<li>-</li>
-        <li><strong>-</strong></li>
-        <li>-</li>
-        <li-</li>-->
-      </ul>
-      <!--<ul class="column">
-        <li>Juicy Luicy</li>
-        <li>Ari Lasso</li>
-        <li>Marcello Tahitoe (Ello)</li>
-        <li>Virzha</li>
-        <li>DEWA 19</li>-->
-      </ul>
-    </div>
+    <span class="lineup-title">Line up</span>
+    <span class="lineup-item">Juicy Luicy</span>
   </div>
   <!--FOOTER-->
   <footer>
@@ -124,7 +108,7 @@ session_start();
     <div class="footer-column">
       <h3>Navigasi Cepat</h3>
       <ul>
-        <li><a href="konser/event.php">Beranda</a></li>
+        <li><a href="../event.php">Beranda</a></li>
         <li><a href="#events">Jadwal Konser</a></li>
         <li><a href="#news">Berita dan Artikel</a></li>
         <li><a href="#contact">Hubungi Kami</a></li>

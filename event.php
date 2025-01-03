@@ -29,7 +29,7 @@ $events = $stmt->fetchAll();
     <input class="pl-10 py-2 rounded-full focus:outline-none w-full" placeholder="Search..." type="text" />
     </div>
     <a href="admin/login.php" role="button" class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
-    Login/Daftar
+    Login
     <i class="fas fa-user ml-2"></i>
     </a>
 </nav>

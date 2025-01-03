@@ -46,56 +46,7 @@ if (isset($_GET['delete'])) {
 // Read events
 $stmt = $pdo->query("SELECT * FROM card_dashboard");
 $events = $stmt->fetchAll();
-
-
-// BAGIAN INFORMASI EVENT
-// Handle Create
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create'])) {
-    $foto_card = $_POST['foto_card'];
-    $nama_event = $_POST['nama_event'];
-    $tanggal = $_POST['tanggal'];
-    $lokasi = $_POST['lokasi'];
-
-    $stmt = $pdo->prepare("INSERT INTO card_dashboard (foto_card, nama_event, tanggal, lokasi) VALUES (?, ?, ?, ?)");
-    $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi]);
-}
-
-// Handle Update
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
-    $id_card = $_POST['id_card'];
-    $foto_card = $_POST['foto_card'];
-    $nama_event = $_POST['nama_event'];
-    $tanggal = $_POST['tanggal'];
-    $lokasi = $_POST['lokasi'];
-
-    $stmt = $pdo->prepare("UPDATE card_dashboard SET foto_card=?, nama_event=?, tanggal=?, lokasi=? WHERE id_card=?");
-    $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi, $id_card]);
-}
-
-// Ambil data event untuk diedit
-$event = null; // Inisialisasi variabel event
-if (isset($_GET['edit'])) {
-    $id_card = $_GET['edit'];
-    $stmt = $pdo->prepare("SELECT * FROM  WHERE id_card = ?");
-    $stmt->execute([$id_card]);
-    $event = $stmt->fetch();
-}
-
-// Handle Delete
-if (isset($_GET['delete'])) {
-    $id_card = $_GET['delete'];
-    $stmt = $pdo->prepare("DELETE FROM card_dashboard WHERE id_card=?");
-    $stmt->execute([$id_card]);
-}
-
-// Read events
-$stmt = $pdo->query("SELECT * FROM card_dashboard");
-$events = $stmt->fetchAll();
 ?>
-
-
-
-
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -112,7 +63,7 @@ $events = $stmt->fetchAll();
    <!-- Sidebar -->
    <div class="bg-[#804E00] w-1/4 p-4">
     <div class="flex items-center mb-8">
-     <img alt="Logo" class="mr-2" height="50" src="lgo.png" width="55%"/>
+     <img alt="Logo" class="mr-2" height="50" src="../lgo.png" width="55%"/>
     </div>
     <nav class="flex flex-col space-y-4">
      <button class="bg-[#ffd700] text-[#ffffff] font-bold py-2 px-4 rounded" id="card-dashboard-btn">
@@ -133,7 +84,7 @@ $events = $stmt->fetchAll();
         Hi, <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Admin'; ?>!
         </span>
         <img src="ara.jpeg" alt="Profile Picture" class="h-10 w-10 rounded-full border-2 border-white" />
-        <a href="konser/event.php" class="text-white ml-4 bg-[#ffd700] px-3 py-1 rounded hover:bg-[#ffd700]">Logout</a>
+        <a href="../event.php" class="text-white ml-4 bg-[#ffd700] px-3 py-1 rounded hover:bg-[#ffd700]">Logout</a>
         </div>
         </div>
     <div class="p-8">
