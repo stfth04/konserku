@@ -50,7 +50,7 @@ $events = $stmt->fetchAll();
                     </p><br>
                     <p class="text-white fas fa-map-marker-alt mb-2"><?= htmlspecialchars($event['lokasi']) ?></p><br>
                     <div class="flex justify-end">
-                        <a class="bg-[#FFD700] text-[#FFFFFF] px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none font-bold" href="jusi/konser_juicy_luicy.php">
+                        <a class="bg-[#FFD700] text-[#FFFFFF] px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none font-bold" href="event/juicy_luicy.php">
                             Selengkapnya
                         </a>
                     </div>
@@ -78,7 +78,7 @@ $events = $stmt->fetchAll();
     <div class="footer-column">
       <h3>Navigasi Cepat</h3>
       <ul>
-        <li><a href="index.php" onclick="scrollToTop(event)">Beranda</a></li>
+        <li><a href="event.php" onclick="scrollToTop(event)">Beranda</a></li>
         <li><a href="#events">Jadwal Konser</a></li>
         <li><a href="#news">Berita dan Artikel</a></li>
         <li><a href="#contact">Hubungi Kami</a></li>

@@ -124,7 +124,7 @@ session_start();
     <div class="footer-column">
       <h3>Navigasi Cepat</h3>
       <ul>
-        <li><a href="index.php" onclick="scrollToTop(event)">Beranda</a></li>
+        <li><a href="konser/event.php">Beranda</a></li>
         <li><a href="#events">Jadwal Konser</a></li>
         <li><a href="#news">Berita dan Artikel</a></li>
         <li><a href="#contact">Hubungi Kami</a></li>
