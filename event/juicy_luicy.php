@@ -21,7 +21,6 @@ session_start();
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
       rel="stylesheet"
     />
-
   <link rel="stylesheet" href="event.css" />
 </head>
 <body class="font-roboto bg-[#D2CF9F]">
@@ -62,7 +61,9 @@ session_start();
     <div class="event-description">
     <h2 class="lineup-title">Tentang Konser Juicy Luicy</h2>
       <p>
-      Konser untuk Korban Sakit Hati Lagi adalah Tour Juicy Luicy dan Adrian Khalif. Dalam Tour ini Juicy Luicy dan Adrian Khalif akan mempersembahkan penampilan-penampilan berbeda.
+      Konser untuk Korban Sakit Hati Lagi adalah Tour Juicy 
+      Luicy dan Adrian Khalif. Dalam Tour ini Juicy Luicy dan Adrian Khalif akan 
+      mempersembahkan penampilan-penampilan berbeda.
       </p>
       <ul>
         <li>

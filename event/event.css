@@ -92,26 +92,9 @@ main {
   margin-top: -265px;
   margin-right: -50px;
 }
-
-.artist-lineup {
-  margin-top: 20px;
-  background-color: #804e00;
-  justify-content: space-between;
-  width: 60%;
-  border-radius: 10px;
-}
-
-.artist-lineup ul {
-  list-style: square;
-  margin-left: 20px;
-  font-style: Arial, sans-serif;
-  padding: 10px;
-  list-style-type: disc;
-}
-
 .garis {
   height: 2px; /* Tinggi garis */
-  background-color: black; /* Warna garis */
+  background-color: #804e00; /* Warna garis */
   width: 97.4%; /* Lebar garis */
   margin: 20px 0; /* Margin atas dan bawah */
   margin-left: 15px;
