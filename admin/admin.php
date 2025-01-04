@@ -88,7 +88,6 @@ $events = $stmt->fetchAll();
    <div class="p-8">
     <!-- Card Dashboard Content -->
     <div id="card-dashboard-content">
-     <h2 class="text-xl font-bold mb-4 text-[#804E00]">Card Dashboard</h2>
      <form method="POST" class="mb-4">
       <input type="hidden" name="id_card" value="<?= isset($event) ? $event['id_card'] : '' ?>">
       <input type="text" name="foto_card" placeholder="URL Foto" required class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['foto_card'] : '' ?>">
@@ -131,7 +130,6 @@ $events = $stmt->fetchAll();
 
     <!-- Informasi Event Content -->
     <div id="informasi-event-content" class="hidden">
-     <h2 class="text-xl font-bold mb-4 text-[#804E00]">Informasi Event</h2>
      <table class="min-w-full bg-[#804E00] border border-gray-300 text-[#ffd700]">
       <thead>
        <tr>

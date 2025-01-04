@@ -1,3 +1,4 @@
+/*poster event*/
 .full-width-image {
   width: 100%; /* Gambar memenuhi seluruh lebar layar */
   max-width: 1315px; /* Maksimal lebar gambar untuk desktop */
@@ -10,25 +11,52 @@
 
 main {
   padding: 0px;
-  /*max-width: 1100px;*/
   margin: 0 auto;
   margin-top: 1px;
   text-align: left;
 }
-.konser-title {
-  /* Gaya yang ingin Anda terapkan */
-  color: #000000; /* Contoh: mengubah warna teks */
-  font-size: 36px; /* Contoh: mengubah ukuran font */
-  font-weight: bold; /* Contoh: membuat teks menjadi tebal */
-  padding-left: 20px;
-}
-
 .event-meta {
-  font-size: 1rem;
-  margin: 10px 0 20px;
-  padding-left: 20px;
+  display: flex;
+  flex-direction: column; /* Tumpukkan elemen dalam kolom */
+  align-items: flex-start; /* Elemen rata kiri */
+  padding: 10px;
+  background-color: #804e00; /* Warna latar untuk kontainer */
+  border-radius: 10px;
+  width: 810px;
+  margin-left: 13px;
+  margin-top: 20px;
 }
 
+.konser-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffd700; /* Warna teks judul */
+  margin-bottom: 10px; /* Jarak di bawah judul */
+}
+
+.meta-info {
+  display: flex;
+  align-items: center; /* Sejajarkan ikon dan teks secara vertikal */
+  font-size: 14px;
+  color: #ffffff; /* Warna teks */
+  gap: 10px; /* Jarak antar elemen */
+}
+
+.meta-info span {
+  display: flex;
+  align-items: center; /* Pastikan teks dan ikon sejajar */
+}
+
+.meta-info i {
+  margin-right: 5px; /* Jarak ikon dengan teks */
+}
+.garis {
+  height: 2px; /* Tinggi garis */
+  background-color: #804e00; /* Warna garis */
+  width: 97.4%; /* Lebar garis */
+  margin: 20px 0; /* Margin atas dan bawah */
+  margin-left: 15px;
+}
 .event-content {
   display: flex;
   flex-wrap: wrap;
@@ -58,24 +86,11 @@ main {
   text-align: center;
   position: relative;
 }
-/* Styling untuk gambar */
+/* Styling untuk gambar venue */
 .event-image {
   float: right; /* Gambar berada di kanan */
   margin-left: 20px; /* Beri jarak antara teks dan gambar */
 }
-
-/*.event-image img {
-  display: flex;
-  width: 59px; /* Ukuran gambar sedang */
-/*height: auto; /* Menjaga proporsi gambar */
-/*border: 2px solid #000000; /* Garis pinggir untuk gambar */
-/*border-radius: 5px; /* Sudut gambar membulat */
-/*margin-top: -270px;
-  /*max-width: 500px; /* Gambar tidak akan lebih lebar dari kontainer */
-/*height: auto;
-  margin-right: 50px;
-}*/
-
 .event-image {
   display: flex; /* Menggunakan flexbox untuk memusatkan gambar */
   justify-content: center; /* Memusatkan gambar secara horizontal */
@@ -84,27 +99,21 @@ main {
 }
 
 .seating-plan {
-  max-width: 50%; /* Mengatur lebar maksimum gambar menjadi 80% dari kontainer */
+  max-width: 60%; /* Mengatur lebar maksimum gambar menjadi 80% dari kontainer */
   height: auto; /* Memastikan tinggi gambar otomatis sesuai dengan lebar */
   border: 2px solid #ccc; /* Menambahkan border di sekitar gambar */
   border-radius: 8px; /* Memberikan sudut yang melengkung pada border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
-  margin-top: -265px;
+  margin-top: -300px;
   margin-right: -50px;
 }
-.garis {
-  height: 2px; /* Tinggi garis */
-  background-color: #804e00; /* Warna garis */
-  width: 97.4%; /* Lebar garis */
-  margin: 20px 0; /* Margin atas dan bawah */
-  margin-left: 15px;
-}
+
 /* Atur gaya untuk kontainer */
 .lineup-container {
   background-color: #804e00; /* Warna cokelat */
-  color: #ffffff; /* Warna kuning */
-  padding: 10px; /* Jarak di dalam kontainer */
-  width: 2000x; /* Panjang kontainer */
+  color: #ffffff; /* Warna putih */
+  padding: 25px; /* Jarak di dalam kontainer */
+  width: 813px; /* Lebar lebih kecil */
   text-align: left; /* Teks rata kiri */
   border-radius: 10px;
   margin-top: 10px;
@@ -123,6 +132,15 @@ main {
 .lineup-item {
   display: block; /* Tampilkan di baris sendiri */
   margin-top: 10px; /* Jarak ke atas */
+}
+.lineup-item::before {
+  content: ""; /* Elemen kosong untuk membuat bulatan */
+  display: inline-block;
+  width: 6px; /* Diameter bulatan */
+  height: 6px; /* Diameter bulatan */
+  background-color: #ffffff; /* Warna bulatan */
+  border-radius: 50%; /* Membuat bentuk bulat */
+  margin-right: 10px; /* Jarak antara bulatan dan teks */
 }
 /* Footer Container */
 footer {

@@ -48,14 +48,16 @@ session_start();
 </div>
 <!-- Event Details -->
 <main>
-<h1 class="konser-title">Konser Untuk Korban Sakit Hati Lagi</h1>
-  <p class="event-meta">
-    <i class="fas fa-calendar-alt"></i> Sabtu, 22 Februari 2025 &nbsp;
-    <i class="fas fa-map-marker-alt"></i> Gedung Sultan Suriansyah,
-    Banjarmasin
-  </p>
+<div class="event-meta">
+  <h1 class="konser-title">Konser Untuk Korban Sakit Hati Lagi</h1>
+  <div class="meta-info">
+    <span><i class="fas fa-calendar-alt"></i> Sabtu, 22 Februari 2025</span>
+    &nbsp;|&nbsp;
+    <span><i class="fas fa-map-marker-alt"></i> Gedung Sultan Suriansyah, Banjarmasin</span>
+  </div>
+</div>
+<!-- Garis menggunakan div -->
   <div class="garis"></div>
-  <!-- Garis menggunakan div -->
   <!-- Content Section -->
   <div class="event-content">
     <div class="event-description">
