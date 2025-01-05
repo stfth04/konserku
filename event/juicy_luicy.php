@@ -1,5 +1,9 @@
 <?php
 session_start();
+// Ambil data dari tabel card_dashboard
+$stmt = $pdo->query("SELECT * FROM event");
+$events = $stmt->fetchAll();
+?>
 ?>
 <html lang="en">
 <head>
@@ -42,56 +46,56 @@ session_start();
     <i class="fas fa-user ml-2"></i>
     </a>
 </nav>
-<!--poster event-->
+<?php foreach ($events as $event): ?>
+<!-- Poster event -->
 <div>
-  <img src="poster.png" class="full-width-image" />
+  <img src="<?= htmlspecialchars($event['foto_poster']) ?>" class="full-width-image" alt="Event Poster" />
 </div>
+
 <!-- Event Details -->
 <main>
 <div class="event-meta">
-  <h1 class="konser-title">Konser Untuk Korban Sakit Hati Lagi</h1>
+  <h1 class="konser-title"><?= htmlspecialchars($event['nama_event']) ?></h1>
   <div class="meta-info">
-    <span><i class="fas fa-calendar-alt"></i> Sabtu, 22 Februari 2025</span>
+    <span><i class="fas fa-calendar-alt"></i> <?= (new DateTime($event['tanggal']))->format('l, d F Y') ?></span>
     &nbsp;|&nbsp;
-    <span><i class="fas fa-map-marker-alt"></i> Gedung Sultan Suriansyah, Banjarmasin</span>
+    <span><i class="fas fa-map-marker-alt"></i> <?= htmlspecialchars($event['lokasi']) ?></span>
   </div>
 </div>
+
 <!-- Garis menggunakan div -->
-  <div class="garis"></div>
-  <!-- Content Section -->
-  <div class="event-content">
-    <div class="event-description">
-    <h2 class="lineup-title">Tentang Konser Juicy Luicy</h2>
-      <p>
-      Konser untuk Korban Sakit Hati Lagi adalah Tour Juicy 
-      Luicy dan Adrian Khalif. Dalam Tour ini Juicy Luicy dan Adrian Khalif akan 
-      mempersembahkan penampilan-penampilan berbeda.
-      </p>
-      <ul>
-        <li>
-          Penampilan spesial oleh musisi Juicy Luicy.
-        </li>
-        <li>Diselenggarakan di <strong>Gedung Suriansyah</strong>.</li>
-        <li>Tanggal: Sabtu, 22 Februari 2025</li>
-        <li>Waktu: - WIB</li>
-      </ul>
-      <p>
-        Untuk informasi lengkap dan pemesanan tiket:
-        <a href="https://www.goersapp.com/events/konser-untuk-korban-sakit-hati-lagi-banjarmasin--kukshlbanjarmasin" target="_blank" class="btn-link"
-          >Klik di sini</a
-        >
-      </p>
-    </div>
+<div class="garis"></div>
+
+<!-- Content Section -->
+<div class="event-content">
+  <div class="event-description">
+    <h2 class="lineup-title">Tentang <?= htmlspecialchars($event['nama_event']) ?></h2>
+    <p><?= htmlspecialchars($event['desk']) ?></p>
+    <ul>
+      <li>Diselenggarakan di <strong><?= htmlspecialchars($event['venue']) ?></strong>.</li>
+      <li>Tanggal: <?= (new DateTime($event['tanggal']))->format('d F Y') ?></li>
+      <li>Waktu: - WIB</li>
+    </ul>
+    <p>
+      Untuk informasi lengkap dan pemesanan tiket:
+      <a href="<?= htmlspecialchars($event['ticket_link']) ?>" target="_blank" class="btn-link">Klik di sini</a>
+    </p>
   </div>
-  <!-- Seating Plan Image -->
-  <div class="event-image">
-    <img src="venue.jpg" alt="Seating Plan" class="seating-plan" />
-  </div>
-  <!-- Line up -->
-  <div class="lineup-container">
-    <span class="lineup-title">Line up</span>
-    <span class="lineup-item">Juicy Luicy</span>
-  </div>
+</div>
+
+<!-- Seating Plan Image venue -->
+<div class="event-image">
+  <img src="venue.jpg" alt="Seating Plan" class="seating-plan" />
+</div>
+
+<div class="lineup-container">
+  <span class="lineup-title">Line up</span>
+  <?php
+  $lineup = explode(',', $event['linup']); // Memisahkan berdasarkan koma
+  foreach ($lineup as $artist): ?>
+    <span class="lineup-item"><?= htmlspecialchars(trim($artist)) ?></span>
+  <?php endforeach; ?>
+</div>
   <!--FOOTER-->
   <footer>
   <div class="footer-container">
