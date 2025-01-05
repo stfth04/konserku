@@ -9,7 +9,10 @@
           $nama_event = $d['nama_event'];
           $tanggal = $d['tanggal'];
           $lokasi = $d['lokasi'];
-      
+          $desk = $d['desk'];        
+          $lineup = $d['lineup'];    
+          $venue = $d['venue'];
+     
       }
       ?>
 <html lang="en">
@@ -55,8 +58,8 @@
 <!-- Content Section -->
 <div class="event-content">
   <div class="event-description">
-    <h2 class="lineup-title">Tentang <?= htmlspecialchars($nama_event) ?></h2>
-    <p><?= htmlspecialchars($event['desk']) ?></p>
+    <!-- <h2 class="lineup-title">Tentang <?= htmlspecialchars($nama_event) ?></h2> -->
+    <p><?= htmlspecialchars($desk) ?></p>
     <ul>
       <li>Diselenggarakan di <strong>[Isian Venue]</strong>.</li>
       <li>Tanggal: <?= (new DateTime($tanggal))->format('d F Y') ?></li>
@@ -64,24 +67,19 @@
     </ul>
     <p>
       Untuk informasi lengkap dan pemesanan tiket:
-      <a href="<?= htmlspecialchars($event['ticket_link']) ?>" target="_blank" class="btn-link">Klik di sini</a>
-    </p>
+        <a href="" target="_blank" class="btn-link">Klik di sini</a>
+      </p>
+    </div>
   </div>
-</div>
-<!-- Seating Plan Image venue -->
-<div class="event-image">
-  <img src="venue.jpg" alt="Seating Plan" class="seating-plan" />
-</div>
-<div class="lineup-container">
-  <span class="lineup-title">Line Up</span>
-  <?php
-  // Assuming $card_dashboard is the correct record for the event
-  $lineup = explode(',', $event['lineup']); // Split lineup string by commas
-  foreach ($lineup as $artist): ?>
-    <span class="lineup-item"><?= htmlspecialchars(trim($artist)) ?></span>
-  <?php endforeach; ?>
-</div>
-  <!--FOOTER-->
+  <div class="event-content">
+    <div class="event-description">
+      <li>Lineup: <?= htmlspecialchars($lineup) ?></li>
+      <img src="<?= htmlspecialchars($venue) ?>" alt="Event Venue" class="" />
+    </div>
+  </div>
+  
+    <!-- <img src="<?= htmlspecialchars($venue) ?>" alt="Event Image" class="seating-plan" /> -->
+
   <?php include('footer.php'); ?>
 </main>
   </html>
