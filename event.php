@@ -50,7 +50,7 @@ $events = $stmt->fetchAll();
                     </p><br>
                     <p class="text-white fas fa-map-marker-alt mb-2"><?= htmlspecialchars($event['lokasi']) ?></p><br>
                     <div class="flex justify-end">
-                        <a class="bg-[#FFD700] text-[#FFFFFF] px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none font-bold" href="event/juicy_luicy.php">
+                        <a class="bg-[#FFD700] text-[#FFFFFF] px-4 py-2 rounded-md hover:bg-[#bfbf8f] focus:outline-none font-bold" href="event/detail.php?id_card=<?= $event['id_card']; ?>">
                             Selengkapnya
                         </a>
                     </div>
