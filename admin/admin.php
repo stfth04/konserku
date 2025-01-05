@@ -15,11 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create'])) {
     $nama_event = $_POST['nama_event'];
     $tanggal = $_POST['tanggal'];
     $lokasi = $_POST['lokasi'];
+    $desk = $_POST['desk'];        
+    $lineup = $_POST['lineup'];    
+    $venue = $_POST['venue'];
 
-    $stmt = $pdo->prepare("INSERT INTO card_dashboard (foto_card, nama_event, tanggal, lokasi) VALUES (?, ?, ?, ?)");
-    $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi]);
+    $stmt = $pdo->prepare("INSERT INTO card_dashboard (foto_card, nama_event, tanggal, lokasi, desk, lineup, venue) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi, $desk, $lineup, $venue]);
 }
-
+    
 // Handle Update
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     $id_card = $_POST['id_card'];
@@ -27,11 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     $nama_event = $_POST['nama_event'];
     $tanggal = $_POST['tanggal'];
     $lokasi = $_POST['lokasi'];
+    $desk = $_POST['desk'];        // Ambil deskripsi
+    $lineup = $_POST['lineup'];    // Ambil lineup
+    $venue = $_POST['venue'];      // Ambil venue
 
-    $stmt = $pdo->prepare("UPDATE card_dashboard SET foto_card=?, nama_event=?, tanggal=?, lokasi=? WHERE id_card=?");
-    $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi, $id_card]);
-}
-
+    $stmt = $pdo->prepare("UPDATE card_dashboard SET foto_card=?, nama_event=?, tanggal=?, lokasi=?, desk=?, lineup=?, venue=? WHERE id_card=?");
+    $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi, $desk, $lineup, $venue, $id_card]);
+}    
 // Ambil data event untuk diedit
 $event = null; // Inisialisasi variabel event
 if (isset($_GET['edit'])) {
@@ -40,6 +45,7 @@ if (isset($_GET['edit'])) {
     $stmt->execute([$id_card]);
     $event = $stmt->fetch();
 }
+
 
 // Handle Delete
 if (isset($_GET['delete'])) {
@@ -51,58 +57,6 @@ if (isset($_GET['delete'])) {
 // Fetch Data untuk Card Dashboard
 $stmt = $pdo->query("SELECT * FROM card_dashboard");
 $dashboard_events = $stmt->fetchAll();
-
-// CRUD INFORMASI EVENT
-
-// Handle Create untuk Informasi Event
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create_event'])) {
-    $foto_poster = $_POST['foto_poster'];
-    $nama_event = $_POST['nama_event'];
-    $tanggal = $_POST['tanggal'];
-    $lokasi = $_POST['lokasi'];
-    $desk = $_POST['desk'];
-    $linup = $_POST['linup'];
-    $venue = $_POST['venue'];
-
-    $stmt = $pdo->prepare("INSERT INTO event (foto_poster, nama_event, tanggal, lokasi, desk, linup, venue) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->execute([$foto_poster, $nama_event, $tanggal, $lokasi, $desk, $linup, $venue]);
-
-
-    header("Location: admin.php");
-    exit();
-}
-
-// Handle Update untuk Informasi Event
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_event'])) {
-    $id_event = $_POST['id_event'];
-    $foto_poster = $_POST['foto_poster'];
-    $nama_event = $_POST['nama_event'];
-    $tanggal = $_POST['tanggal'];
-    $lokasi = $_POST['lokasi'];
-    $desk = $_POST['desk'];
-    $linup = $_POST['linup'];
-    $venue = $_POST['venue'];
-
-    $stmt = $pdo->prepare("UPDATE event SET foto_poster=?, nama_event=?, tanggal=?, lokasi=?, desk=?, linup=?, venue=? WHERE id_event=?");
-    $stmt->execute([$foto_poster, $nama_event, $tanggal, $lokasi, $desk, $linup, $venue, $id_event]);
-
-    header("Location: admin.php");
-    exit();
-}
-
-// Handle Delete untuk Informasi Event
-if (isset($_GET['delete_event'])) {
-    $id_event = $_GET['delete_event'];
-    $stmt = $pdo->prepare("DELETE FROM event WHERE id_event=?");
-    $stmt->execute([$id_event]);
-
-    header("Location: admin.php");
-    exit();
-}
-
-// Fetch Data untuk Informasi Event
-$stmt = $pdo->query("SELECT * FROM event");
-$info_events = $stmt->fetchAll();
 ?>
 <html lang="en">
 <head>
@@ -122,9 +76,6 @@ $info_events = $stmt->fetchAll();
     <nav class="flex space-x-4">
      <button class="bg-[#ffd700] text-[#ffffff] font-bold py-2 px-4 rounded" id="card-dashboard-btn">
       Card Dashboard
-     </button>
-     <button class="bg-[#ffd700] text-[#ffffff] font-bold py-2 px-4 rounded" id="informasi-event-btn">
-      Informasi Event
      </button>
     </nav>
     <!-- Selamat datang dan profil admin -->
@@ -147,6 +98,9 @@ $info_events = $stmt->fetchAll();
     <input type="text" name="nama_event" placeholder="Nama Event" required class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['nama_event'] : '' ?>">
     <input type="date" name="tanggal" required class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['tanggal'] : '' ?>">
     <input type="text" name="lokasi" placeholder="Lokasi" required class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['lokasi'] : '' ?>">
+    <input type="text" name="desk" placeholder="Deskripsi" required class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['desk'] : '' ?>">
+    <input type="text" name="lineup" placeholder="Lineup (Artis/Pembicara)" class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['lineup'] : '' ?>">
+    <input type="text" name="venue" placeholder="Venue (Tempat Event)" class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['venue'] : '' ?>">
     <button type="submit" name="<?= isset($event) ? 'update' : 'create' ?>" class="bg-[#ffd700] text-white px-4 py-2 rounded hover:bg-[#e6c200]">
     <?= isset($event) ? 'Update Event' : 'Create Event' ?>
     </button>
@@ -161,6 +115,9 @@ $info_events = $stmt->fetchAll();
         <th class="border px-4 py-2">Nama Event</th>
         <th class="border px-4 py-2">Tanggal</th>
         <th class="border px-4 py-2">Lokasi</th>
+        <th class="border px-4 py-2">Deskripsi</th>
+        <th class="border px-4 py-2">Lineup</th>
+        <th class="border px-4 py-2">Venue</th>
         <th class="border px-4 py-2">Actions</th>
        </tr>
       </thead>
@@ -172,67 +129,18 @@ $info_events = $stmt->fetchAll();
          <td class="border px-4 py-2"><?= htmlspecialchars($card_dashboard['nama_event']) ?></td>
          <td class="border px-4 py-2"><?= (new DateTime($card_dashboard['tanggal']))->format('d F Y') ?></td>
          <td class="border px-4 py-2"><?= htmlspecialchars($card_dashboard['lokasi']) ?></td>
+         <td class="border px-4 py-2"><?= htmlspecialchars($card_dashboard['desk']) ?></td>
+         <td class="border px-4 py-2"><?= htmlspecialchars($card_dashboard['lineup']) ?></td> 
+         <td class="border px-4 py-2"><?= htmlspecialchars($card_dashboard['venue']) ?></td> 
          <td class="border px-4 py-2">
          <a href="?edit=<?= $card_dashboard['id_card'] ?>" class="text-blue-600 hover:underline">Edit</a>
-<a href="?delete=<?= $card_dashboard['id_card'] ?>" class="text-red-600 hover:underline" onclick="return confirm('Yakin ingin menghapus event ini?');">Delete</a>
-
+        <a href="?delete=<?= $card_dashboard['id_card'] ?>" class="text-red-600 hover:underline" onclick="return confirm('Yakin ingin menghapus event ini?');">Delete</a>
          </td>
         </tr>
        <?php endforeach; ?>
       </tbody>
      </table>
     </div>
-    <div id="informasi-event-content" class="p-8">
-    <form method="POST" class="mb-4">
-        <input type="hidden" name="id_event" value="<?= isset($info_event) ? $info_event['id_event'] : '' ?>">
-        <input type="text" name="foto_poster" placeholder="URL Poster" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['foto_poster'] : '' ?>">
-        <input type="text" name="nama_event" placeholder="Nama Event" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['nama_event'] : '' ?>">
-        <input type="date" name="tanggal" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['tanggal'] : '' ?>">
-        <input type="text" name="lokasi" placeholder="Lokasi" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['lokasi'] : '' ?>">
-        <input type="text" name="desk" placeholder="Deskripsi" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['desk'] : '' ?>">
-        <input type="text" name="linup" placeholder="Lineup" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['linup'] : '' ?>">
-        <input type="text" name="venue" placeholder="Venue" required class="w-full bg-gray-200 p-2 rounded mb-2" value="<?= isset($info_event) ? $info_event['venue'] : '' ?>">
-        <button type="submit" name="<?= isset($info_event) ? 'update_event' : 'create_event' ?>" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
-            <?= isset($info_event) ? 'Update Event' : 'Create Event' ?>
-        </button>
-    </form>
-
-    <!-- Tabel Data Informasi Event -->
-    <table class="min-w-full bg-white border border-gray-300">
-        <thead>
-            <tr>
-                <th class="border px-4 py-2">ID</th>
-                <th class="border px-4 py-2">Poster</th>
-                <th class="border px-4 py-2">Nama Event</th>
-                <th class="border px-4 py-2">Tanggal</th>
-                <th class="border px-4 py-2">Lokasi</th>
-                <th class="border px-4 py-2">Deskripsi</th>
-                <th class="border px-4 py-2">Lineup</th>
-                <th class="border px-4 py-2">Venue</th>
-                <th class="border px-4 py-2">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($info_events as $info_event): ?>
-                <tr>
-                    <td class="border px-4 py-2"><?= $info_event['id_event'] ?></td>
-                    <td class="border px-4 py-2"><img src="<?= htmlspecialchars($info_event['foto_poster']) ?>" alt="Poster" class="h-16 w-16 object-cover"></td>
-                    <td class="border px-4 py-2"><?= htmlspecialchars($info_event['nama_event']) ?></td>
-                    <td class="border px-4 py-2"><?= htmlspecialchars($info_event['tanggal']) ?></td>
-                    <td class="border px-4 py-2"><?= htmlspecialchars($info_event['lokasi']) ?></td>
-                    <td class="border px-4 py-2"><?= htmlspecialchars($info_event['desk']) ?></td>
-                    <td class="border px-4 py-2"><?= htmlspecialchars($info_event['linup']) ?></td>
-                    <td class="border px-4 py-2"><?= htmlspecialchars($info_event['venue']) ?></td>
-                    <td class="border px-4 py-2">
-                        <a href="?edit_event=<?= $info_event['id_event'] ?>" class="text-blue-600 hover:underline">Edit</a>
-                        <a href="?delete_event=<?= $info_event['id_event'] ?>" class="text-red-600 hover:underline" onclick="return confirm('Yakin ingin menghapus event ini?');">Delete</a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
-</div>
  <script src="admin.js"></script>
 </body>
 </html>

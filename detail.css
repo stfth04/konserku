@@ -1,20 +1,19 @@
-/*poster event*/
+/*untuk poster*/
 .full-width-image {
-  width: 100%; /* Gambar memenuhi seluruh lebar layar */
-  max-width: 1315px; /* Maksimal lebar gambar untuk desktop */
+  width: 50%; /* Gambar memenuhi seluruh lebar layar */
   height: auto; /* Menjaga rasio aspek */
   display: block; /* Menghilangkan spasi bawah gambar */
   margin: 0 auto; /* Menengahkan gambar */
   margin-top: 10px;
   border-radius: 10px;
 }
-
 main {
   padding: 0px;
   margin: 0 auto;
   margin-top: 1px;
   text-align: left;
 }
+/*untuk judul event*/
 .event-meta {
   display: flex;
   flex-direction: column; /* Tumpukkan elemen dalam kolom */
@@ -26,14 +25,12 @@ main {
   margin-left: 13px;
   margin-top: 20px;
 }
-
 .konser-title {
   font-size: 30px;
   font-weight: bold;
   color: #ffd700; /* Warna teks judul */
   margin-bottom: 10px; /* Jarak di bawah judul */
 }
-
 .meta-info {
   display: flex;
   align-items: center; /* Sejajarkan ikon dan teks secara vertikal */
@@ -41,7 +38,6 @@ main {
   color: #ffffff; /* Warna teks */
   gap: 10px; /* Jarak antar elemen */
 }
-
 .meta-info span {
   display: flex;
   align-items: center; /* Pastikan teks dan ikon sejajar */
@@ -50,6 +46,7 @@ main {
 .meta-info i {
   margin-right: 5px; /* Jarak ikon dengan teks */
 }
+/*garis*/
 .garis {
   height: 2px; /* Tinggi garis */
   background-color: #804e00; /* Warna garis */
@@ -57,6 +54,7 @@ main {
   margin: 20px 0; /* Margin atas dan bawah */
   margin-left: 15px;
 }
+/* untuk deskripsi*/
 .event-content {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +67,6 @@ main {
   margin-top: 10px; /* Jarak atas */
   margin-left: 15px;
 }
-
 .event-description {
   color: #ffffff; /* Warna teks */
   font-size: 16px; /* Ukuran font */
@@ -99,12 +96,12 @@ main {
 }
 
 .seating-plan {
-  max-width: 60%; /* Mengatur lebar maksimum gambar menjadi 80% dari kontainer */
+  max-width: 50%; /* Mengatur lebar maksimum gambar menjadi 80% dari kontainer */
   height: auto; /* Memastikan tinggi gambar otomatis sesuai dengan lebar */
   border: 2px solid #ccc; /* Menambahkan border di sekitar gambar */
   border-radius: 8px; /* Memberikan sudut yang melengkung pada border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
-  margin-top: -300px;
+  margin-top: -230px;
   margin-right: -50px;
 }
 
@@ -116,7 +113,7 @@ main {
   width: 813px; /* Lebar lebih kecil */
   text-align: left; /* Teks rata kiri */
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 15px;
 }
 
@@ -141,75 +138,4 @@ main {
   background-color: #ffffff; /* Warna bulatan */
   border-radius: 50%; /* Membuat bentuk bulat */
   margin-right: 10px; /* Jarak antara bulatan dan teks */
-}
-/* Footer Container */
-footer {
-  background-color: #804e00; /* Latar belakang gelap */
-  color: #ffffff; /* Warna teks putih */
-  padding: 20px 10%;
-  font-family: Arial, sans-serif;
-  margin-top: 20px;
-}
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
-}
-
-.footer-column h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #ffd700; /* Warna emas */
-}
-
-.footer-column p,
-.footer-column ul {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 8px;
-}
-
-.footer-column ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-  color: #ffd700;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.social-icons a:hover {
-  color: #ffd700;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  border-top: 1px solid #804e00;
-  padding-top: 10px;
 }
