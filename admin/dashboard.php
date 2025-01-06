@@ -1,11 +1,10 @@
 <?php
-session_start();
 include 'koneksi.php'; // Koneksi database
 include 'db.php';
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['username'])) {
+//     header("Location: login.php");
+//     exit();
+// }
 
 try {
     // Query untuk menghitung total event

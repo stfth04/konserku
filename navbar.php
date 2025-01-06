@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,10 +40,17 @@
         <input class="pl-10 py-2 rounded-full focus:outline-none w-full" placeholder="Search..." type="text" />
     </div>
     <!-- Login Button -->
-    <a href="admin/login.php" role="button" class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
+    <a href="<?php echo isset($_SESSION['username']) ? 'admin/logout.php' : 'admin/login.php'; ?>" 
+   role="button" 
+   class="text-white px-4 py-2 hover:bg-[#663B00] rounded-md focus:outline-none flex items-center">
+   <?php if (isset($_SESSION['username'])): ?>
+        Logout
+        <i class="fas fa-sign-out-alt ml-2"></i>
+   <?php else: ?>
         Login
         <i class="fas fa-user ml-2"></i>
-    </a>
+   <?php endif; ?>
+</a>
 </nav>
 </body>
 </html>

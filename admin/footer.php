@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
  <meta charset="utf-8"/>
@@ -32,6 +35,6 @@
             <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Admin'; ?>!
           </span>
           <img src="profile.png" alt="Profile Picture" class="h-10 w-10 rounded-full border-2 border-white" />
-          <a href="../index.php" class="text-white ml-4 bg-[#ffd700] px-3 py-1 rounded hover:bg-[#e6c200]">Logout</a>
+          <a href="logout.php" class="text-white ml-4 bg-[#ffd700] px-3 py-1 rounded hover:bg-[#e6c200]">Logout</a>
         </div>
       </div>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'admin/db.php';
 // Ambil data dari tabel card_dashboard
 $stmt = $pdo->query("SELECT * FROM card_dashboard");
