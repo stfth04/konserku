@@ -1,8 +1,7 @@
 <?php
 
 include 'db.php';
-?>
-<?php
+
 // CRUD CARD DASHBOARD
 //BAGIAN CARD DASHBOARD
 // Handle Create
@@ -132,6 +131,6 @@ $dashboard_events = $stmt->fetchAll();
       </tbody>
      </table>
     </div>
- <script src="admin.js"></script>
+ <!-- <script src="admin.js"></script> -->
 </body>
 </html>
