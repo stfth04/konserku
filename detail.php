@@ -12,6 +12,7 @@
           $desk = $d['desk'];        
           $lineup = $d['lineup'];    
           $venue = $d['venue'];
+          $link = $d['link'];
      
       }
       ?>
@@ -58,28 +59,27 @@
 <!-- Content Section -->
 <div class="event-content">
   <div class="event-description">
-    <!-- <h2 class="lineup-title">Tentang <?= htmlspecialchars($nama_event) ?></h2> -->
+    <h2 class="lineup-title">Tentang <?= htmlspecialchars($nama_event) ?></h2>
     <p><?= htmlspecialchars($desk) ?></p>
     <ul>
       <li>Diselenggarakan di <?= htmlspecialchars($lokasi) ?></li>
       <li>Tanggal : <?= (new DateTime($tanggal))->format('d F Y') ?></li>
-      <li>Waktu: - WIB</li>
     </ul>
     <p>
       Untuk informasi lengkap dan pemesanan tiket:
-        <a href="" target="_blank" class="btn-link">Klik di sini</a>
+        <a href="<?= htmlspecialchars($link) ?>" target="_blank" class="btn-link">Klik di sini</a>
       </p>
     </div>
   </div>
   <div class="event-content">
     <div class="event-description">
-      <li>Lineup: <?= htmlspecialchars($lineup) ?></li>
-      <img src="<?= htmlspecialchars($venue) ?>" alt="Event Venue" class="" />
+    <h2 class="lineup-title">Lineup</h2>
+      <li><?= htmlspecialchars($lineup) ?></li>
     </div>
   </div>
-  
-    <!-- <img src="<?= htmlspecialchars($venue) ?>" alt="Event Image" class="seating-plan" /> -->
-
+  <div class="event-image">
+    <img src="<?= htmlspecialchars($venue) ?>" alt="Event Venue" class="seating-plan" />
+</div>
   <?php include('footer.php'); ?>
 </main>
   </html>

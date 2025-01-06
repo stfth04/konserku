@@ -85,24 +85,18 @@ main {
 }
 /* Styling untuk gambar venue */
 .event-image {
-  float: right; /* Gambar berada di kanan */
-  margin-left: 20px; /* Beri jarak antara teks dan gambar */
-}
-.event-image {
-  display: flex; /* Menggunakan flexbox untuk memusatkan gambar */
-  justify-content: center; /* Memusatkan gambar secara horizontal */
-  align-items: center; /* Memusatkan gambar secara vertikal */
-  margin: 20px; /* Memberikan jarak di sekitar gambar */
+  width: 100%; /* Atau lebar yang sesuai */
+  max-width: 800px; /* Contoh batas maksimum */
 }
 
 .seating-plan {
-  max-width: 50%; /* Mengatur lebar maksimum gambar menjadi 80% dari kontainer */
-  height: auto; /* Memastikan tinggi gambar otomatis sesuai dengan lebar */
+  width: 45%; /* Kurangi lebar untuk memperkecil ukuran gambar */
+  height: auto; /* Tetap menjaga proporsi gambar */
   border: 2px solid #ccc; /* Menambahkan border di sekitar gambar */
   border-radius: 8px; /* Memberikan sudut yang melengkung pada border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
-  margin-top: -230px;
-  margin-right: -50px;
+  margin-left: 890px; /* Sesuaikan posisi margin horizontal */
+  margin-top: -350px; /* Sesuaikan posisi margin vertikal */
 }
 
 /* Atur gaya untuk kontainer */
@@ -128,7 +122,7 @@ main {
 /* Gaya untuk item "Juicy Luicy" */
 .lineup-item {
   display: block; /* Tampilkan di baris sendiri */
-  margin-top: 10px; /* Jarak ke atas */
+  margin-top: 30px; /* Jarak ke atas */
 }
 .lineup-item::before {
   content: ""; /* Elemen kosong untuk membuat bulatan */

@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
         $_SESSION['username'] = $cariuser['username'];
         $_SESSION['log'] = 'login';
         
-        echo '<script>alert("Anda Berhasil Login sebagai ' . $cariuser['username'] . '"); window.location="admin.php";</script>';
+        echo '<script>alert("Anda Berhasil Login sebagai ' . $cariuser['username'] . '"); window.location="dashboard.php";</script>';
     } else {
         echo '<script>alert("Data yang anda masukan salah!!"); history.go(-1);</script>';
     }
