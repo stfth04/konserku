@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konserku</title>
+</head>
+<body>
+    <footer>
+        <div class="footer-container">
+            <!-- Kolom Deskripsi -->
+            <div class="footer-column">
+                <h3>Konserku</h3>
+                <p>
+                Konserku adalah platform digital yang menyajikan informasi terkini tentang event dan 
+      konser di Banjarmasin dan Banjarbaru. Sebagai sumber terpercaya, kami menjembatani 
+      penyelenggara acara dengan audiens melalui detail lengkap, mulai dari jadwal, lokasi, hingga tiket.
+      Dengan tampilan user-friendly, Konserku mendukung perkembangan hiburan lokal dan mempermudah akses 
+      masyarakat terhadap informasi acara berkualitas. 
+      Pilihan utama untuk dunia hiburan di Banjarmasin dan Banjarbaru.
+                </p>
+            </div>
+
+            <!-- Kolom Navigasi Cepat -->
+            <div class="footer-column">
+                <h3>Navigasi Cepat</h3>
+                <ul>
+                    <!--<li><a href="ïndex.php" onclick="scrollToTop(event)">Beranda</a></li>-->
+                    <li><a href="#events">Jadwal Konser</a></li>
+                    <li><a href="#privacy">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom Kontak -->
+            <div class="footer-column">
+                <h3>Kontak</h3>
+                <p>Email: <a href="mailto:info@konserku.com">info@konserku.com</a></p>
+                <p>Telepon: +62 812-3456-7890</p>
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Konserku. Semua Hak Dilindungi.
+        </div>
+    </footer>
     <style>
         /* Reset */
         * {
@@ -86,49 +130,5 @@
             padding-top: 10px;
         }
     </style>
-</head>
-<body>
-    <footer>
-        <div class="footer-container">
-            <!-- Kolom Deskripsi -->
-            <div class="footer-column">
-                <h3>Konserku</h3>
-                <p>
-                Konserku adalah platform digital yang menyajikan informasi terkini tentang event dan 
-      konser di Banjarmasin dan Banjarbaru. Sebagai sumber terpercaya, kami menjembatani 
-      penyelenggara acara dengan audiens melalui detail lengkap, mulai dari jadwal, lokasi, hingga tiket.
-      Dengan tampilan user-friendly, Konserku mendukung perkembangan hiburan lokal dan mempermudah akses 
-      masyarakat terhadap informasi acara berkualitas. 
-      Pilihan utama untuk dunia hiburan di Banjarmasin dan Banjarbaru.
-                </p>
-            </div>
-
-            <!-- Kolom Navigasi Cepat -->
-            <div class="footer-column">
-                <h3>Navigasi Cepat</h3>
-                <ul>
-                    <!--<li><a href="ïndex.php" onclick="scrollToTop(event)">Beranda</a></li>-->
-                    <li><a href="#events">Jadwal Konser</a></li>
-                    <li><a href="#privacy">Kebijakan Privasi</a></li>
-                </ul>
-            </div>
-
-            <!-- Kolom Kontak -->
-            <div class="footer-column">
-                <h3>Kontak</h3>
-                <p>Email: <a href="mailto:info@konserku.com">info@konserku.com</a></p>
-                <p>Telepon: +62 812-3456-7890</p>
-                <h3>Ikuti Kami</h3>
-                <div class="social-icons">
-                    <a href="https://instagram.com" target="_blank">Instagram</a>
-                    <a href="https://facebook.com" target="_blank">Facebook</a>
-                    <a href="https://twitter.com" target="_blank">Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            © 2024 Konserku. Semua Hak Dilindungi.
-        </div>
-    </footer>
 </body>
 </html>
