@@ -1,6 +1,0 @@
-.main-content {
-  margin-left: 25%; /* Memberikan margin kiri untuk konten utama */
-  padding: 20px; /* Memberikan padding pada konten utama */
-  flex: 1; /* Konten utama mengambil sisa ruang */
-  overflow-y: auto; /* Mengizinkan scroll pada konten utama */
-}
