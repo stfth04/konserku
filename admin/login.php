@@ -4,7 +4,7 @@ include 'koneksi.php'; // Pastikan koneksi.php ada dan benar
 
 // Cek apakah pengguna sudah login
 if (isset($_SESSION['log'])) {
-    header('location: admin.php'); // Jika sudah login, arahkan ke admin.php
+    header('location: dashboard.php'); // Jika sudah login, arahkan ke admin.php
     exit();
 }
 
@@ -39,8 +39,8 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="bg-[#d0cba7] flex items-center justify-center min-h-screen">
-    <div class="bg-[#8b4e00] text-center p-12 rounded-lg shadow-lg w-[28rem]">
-        <h2 class="text-yellow-400 text-2xl mb-6">Login Admin</h2>
+    <div class="bg-[#804E00] text-center p-12 rounded-lg shadow-lg w-[28rem]">
+        <h2 class="text-[#ffd700] text-2xl mb-6">Login Admin</h2>
         <form method="POST">
             <div class="mb-6 flex items-center border-b border-gray-300 pb-2">
                 <i class="fas fa-user text-white mr-2"></i>

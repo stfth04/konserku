@@ -57,40 +57,19 @@ if (isset($_GET['delete'])) {
 $stmt = $pdo->query("SELECT * FROM card_dashboard");
 $dashboard_events = $stmt->fetchAll();
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8"/>
- <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
- <title>Admin</title>
- <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
-<body class="bg-[#d3c6a1]">
- <div class="flex h-screen">
-  <!-- Main Content -->
-  <div class="flex-1">
-   <!-- Navbar -->
-   <div class="bg-[#804E00] p-4 flex justify-between items-center">
-    <!-- Tombol di navbar -->
-    <nav class="flex space-x-4">
-     <button class="bg-[#ffd700] text-[#ffffff] font-bold py-2 px-4 rounded" id="card-dashboard-btn">
-      Card Dashboard
-     </button>
-    </nav>
-    <!-- Selamat datang dan profil admin -->
-    <h1 class="text-2xl text-[#ffd700] font-bold">Selamat Datang di Dashboard Admin</h1>
-    <div class="flex items-center">
-     <span class="text-[#ffd700] mr-2">
-      Hi, <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Admin'; ?>!
-     </span>
-     <img src="profile.png" alt="Profile Picture" class="h-10 w-10 rounded-full border-2 border-white" />
-     <a href="../event.php" class="text-white ml-4 bg-[#ffd700] px-3 py-1 rounded hover:bg-[#e6c200]">Logout</a>
-    </div>
-   </div>
-
-    <!-- Card Dashboard Content -->
-    <div class="p-8">
-    <div id="card-dashboard-content">
+<body>
+<?php include('footer.php'); ?>
+<div class="p-8">
+<div id="card-dashboard-content">
      <form method="POST" class="mb-4">
     <input type="hidden" name="id_card" value="<?= isset($event) ? $event['id_card'] : '' ?>">
     <input type="text" name="foto_card" placeholder="URL Foto" required class="w-full bg-[#804E00] text-white p-2 rounded mb-2" value="<?= isset($event) ? $event['foto_card'] : '' ?>">

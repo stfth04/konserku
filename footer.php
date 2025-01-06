@@ -107,10 +107,8 @@
             <div class="footer-column">
                 <h3>Navigasi Cepat</h3>
                 <ul>
-                    <li><a href="event.php" onclick="scrollToTop(event)">Beranda</a></li>
+                    <!--<li><a href="ïndex.php" onclick="scrollToTop(event)">Beranda</a></li>-->
                     <li><a href="#events">Jadwal Konser</a></li>
-                    <li><a href="#news">Berita dan Artikel</a></li>
-                    <li><a href="#contact">Hubungi Kami</a></li>
                     <li><a href="#privacy">Kebijakan Privasi</a></li>
                 </ul>
             </div>

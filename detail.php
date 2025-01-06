@@ -61,8 +61,8 @@
     <!-- <h2 class="lineup-title">Tentang <?= htmlspecialchars($nama_event) ?></h2> -->
     <p><?= htmlspecialchars($desk) ?></p>
     <ul>
-      <li>Diselenggarakan di <strong>[Isian Venue]</strong>.</li>
-      <li>Tanggal: <?= (new DateTime($tanggal))->format('d F Y') ?></li>
+      <li>Diselenggarakan di <?= htmlspecialchars($lokasi) ?></li>
+      <li>Tanggal : <?= (new DateTime($tanggal))->format('d F Y') ?></li>
       <li>Waktu: - WIB</li>
     </ul>
     <p>
