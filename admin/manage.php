@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create'])) {
     $venue = $_POST['venue'];
     $link = $_POST['link'];
 
-    $stmt = $pdo->prepare("INSERT INTO card_dashboard (foto_card, nama_event, tanggal, lokasi, desk, lineup, venue, link) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO card_dashboard (foto_card, nama_event, tanggal, lokasi, desk, lineup, venue, link) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([$foto_card, $nama_event, $tanggal, $lokasi, $desk, $lineup, $venue, $link]);
 }
     
@@ -82,8 +82,7 @@ $dashboard_events = $stmt->fetchAll();
     <button type="submit" name="<?= isset($event) ? 'update' : 'create' ?>" class="bg-[#ffd700] text-white px-4 py-2 rounded hover:bg-[#e6c200]">
     <?= isset($event) ? 'Update Event' : 'Create Event' ?>
     </button>
-
-     </form>
+    </form>
 
      <table class="min-w-full bg-[#804E00] border border-gray-300 text-[#ffd700]">
       <thead>

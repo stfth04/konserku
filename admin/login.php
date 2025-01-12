@@ -1,12 +1,12 @@
 <?php
 session_start();
-include 'koneksi.php'; // Pastikan koneksi.php ada dan benar
+include 'koneksi.php'; 
 
-// Cek apakah pengguna sudah login
-if (isset($_SESSION['log'])) {
-    header('location: dashboard.php'); // Jika sudah login, arahkan ke admin.php
+if (isset($_SESSION['log']) && $_SESSION['log'] === 'login') {
+    header('location: dashboard.php');
     exit();
 }
+
 
 // Cek apakah form login telah disubmit
 if (isset($_POST['login'])) {
