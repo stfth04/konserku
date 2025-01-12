@@ -1,9 +1,10 @@
 <?php 
-      $koneksi = mysqli_connect("localhost","root","","konserku");
+      $koneksi = mysqli_connect("localhost","root","","konserku"); //membuat koneksi ke database mysql
 
       $id_card = $_GET['id_card'];
-      $data = mysqli_query($koneksi, "SELECT * FROM card_dashboard WHERE id_card=$id_card");
+      $data = mysqli_query($koneksi, "SELECT * FROM card_dashboard WHERE id_card=$id_card"); //query untuk mengambil data id_card dari url
 
+      // mengambil data dan menyimpan ke variabel
       while($d = mysqli_fetch_array($data)){
           $foto_card = $d['foto_card'];
           $nama_event = $d['nama_event'];
@@ -50,7 +51,7 @@
   <h1 class="konser-title"><?= htmlspecialchars($nama_event) ?></h1>
   <div class="meta-info">
     <span><i class="fas fa-calendar-alt"></i> <?= (new DateTime($tanggal))->format('l, d F Y') ?></span>
-    &nbsp;|&nbsp;
+    &nbsp;|&nbsp; <!--pemisahan dengan vertikal-->
     <span><i class="fas fa-map-marker-alt"></i> <?= htmlspecialchars($lokasi) ?></span>
   </div>
 </div>
